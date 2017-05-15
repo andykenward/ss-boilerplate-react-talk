@@ -18,3 +18,5 @@ Open a browser and hit [http://localhost:3000](http://localhost:3000), and we ar
 Building the dist version of the project is as easy as running `yarn run build`
 
 If you want to deploy the slideshow to surge, run `yarn run deploy`
+
+[http://ss-boilerplate-react-talk.surge.sh/](http://ss-boilerplate-react-talk.surge.sh/)
