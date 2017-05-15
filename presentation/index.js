@@ -63,7 +63,8 @@ const images = {
   circleci: require("../assets/circleci.svg"),
   lintstaged: require("../assets/lintstaged.jpg"),
   sentry: require("../assets/sentry.svg"),
-  compact: require("../assets/eslint-plugin-compat-demo.gif")
+  compact: require("../assets/eslint-plugin-compat-demo.gif"),
+  stylelintExample: require("../assets/stylelint_example.png")
 };
 
 preloader(images);
@@ -85,11 +86,11 @@ export default class Presentation extends React.Component {
   render() {
     return (
       <Deck
-        transition={["zoom", "slide"]}
+        transition={["fade"]}
         transitionDuration={500}
         theme={theme}
       >
-        <Slide transition={["zoom"]} bgColor="primary">
+        <Slide transition={["fade"]} bgColor="primary">
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
             Stink Studios
           </Heading>
@@ -107,32 +108,6 @@ export default class Presentation extends React.Component {
             https://github.com/Stinkstudios/boilerplate-react/
           </Link>
         </Slide>
-        {/*<Slide>
-          <Table>
-            <TableHeader>
-              <TableRow>
-                <TableHeaderItem />
-                <TableHeaderItem>2011</TableHeaderItem>
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              <TableRow>
-                <TableItem>None</TableItem>
-                <TableItem>
-                  <Image
-                    alt="babel"
-                    src="https://raw.githubusercontent.com/babel/logo/master/babel.png"
-                    width="546"
-                  />
-                </TableItem>
-              </TableRow>
-              <TableRow>
-                <TableItem>jQuery</TableItem>
-                <TableItem>28.3%</TableItem>
-              </TableRow>
-            </TableBody>
-          </Table>
-        </Slide>*/}
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={4} textColor="secondary">Core</Heading>
           <List
@@ -474,8 +449,8 @@ export default class Presentation extends React.Component {
 
           </List>
         </Slide>
-        <Slide>
-          <Heading size={4}>Linting</Heading>
+        <Slide bgColor="tertiary">
+          <Heading size={2}>Linting</Heading>
         </Slide>
         <Slide>
           <Image
@@ -492,9 +467,33 @@ export default class Presentation extends React.Component {
           </List>
         </Slide>
         <Slide>
-          <Heading size={4}>eslint-plugin-compact</Heading>
+          <Heading size={4}>eslint-plugin-compat</Heading>
+          <List>
+          <ListItem>Lint browser compatibility of your code</ListItem>
+          <ListItem>Configuration via browerslist</ListItem>
+          <ListItem>Use caniuse and @kangax's compat table for determining coverage</ListItem>
+          </List>
           <Image src={images.compact} width="80%"/>
         </Slide>
+        <Slide>
+          <Heading size={4}>eslint-plugin-jsx-a11y</Heading>
+          <List>
+          <ListItem>Warns about potential accessibility issues with your React elements</ListItem>
+          </List>
+        </Slide>
+      
+        <Slide>
+          <Image
+            alt="StyleLint logo"
+            width="25%"
+            height="25%"
+            src={images.stylelint}
+          />
+          <Heading size={4}>StyleLint</Heading>
+          <List>CSS linter that helps you enforce consistent conventions and avoid errors in your stylesheets</List>
+          <Image src={images.stylelintExample} width="100%"/>
+        </Slide>
+
         <Slide transition={["fade"]}>
 
           <Image alt="Yarn Logo" width="25%" height="25%" src={images.yarn} />
