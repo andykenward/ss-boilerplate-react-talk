@@ -1,0 +1,15 @@
+"lint-staged": {
+    "gitDir": "../",
+    "linters": {
+      "*(*.js|*.jsx)": [
+        "prettier \"!assets/**/*.js\"",
+        "eslint --ignore-pattern *.min.js",
+        "git add"
+      ],
+      "*(*.css|*.scss)": [
+        "stylefmt",
+        "stylelint",
+        "git add"
+      ]
+    }
+}

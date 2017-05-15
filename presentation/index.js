@@ -5,6 +5,7 @@ import React from "react";
 import {
   BlockQuote,
   Cite,
+  Code,
   Deck,
   Heading,
   ListItem,
@@ -21,6 +22,8 @@ import {
   TableItem,
   TableBody,
   Appear,
+  CodePane,
+  Layout,
   Fill
 } from "spectacle";
 
@@ -64,7 +67,13 @@ const images = {
   lintstaged: require("../assets/lintstaged.jpg"),
   sentry: require("../assets/sentry.svg"),
   compact: require("../assets/eslint-plugin-compat-demo.gif"),
-  stylelintExample: require("../assets/stylelint_example.png")
+  stylelintExample: require("../assets/stylelint_example.png"),
+  yarnLock: require("../assets/yarn-lock.png"),
+  yarnUpgrade: require("../assets/yarn-upgrade.png"),
+  sentrybefore: require("../assets/sentrybefore.png"),
+  sentryafter: require("../assets/sentryafter.png"),
+  browserstack: require("../assets/browserstack.svg"),
+  typescript: require("../assets/typescript.svg")
 };
 
 preloader(images);
@@ -89,6 +98,7 @@ export default class Presentation extends React.Component {
         transition={["fade"]}
         transitionDuration={500}
         theme={theme}
+        maxHeight="100vh"
       >
         <Slide transition={["fade"]} bgColor="primary">
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
@@ -107,6 +117,7 @@ export default class Presentation extends React.Component {
           >
             https://github.com/Stinkstudios/boilerplate-react/
           </Link>
+          <Text>v2.3.0</Text>
         </Slide>
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={4} textColor="secondary">Core</Heading>
@@ -461,27 +472,31 @@ export default class Presentation extends React.Component {
           />
           <Heading size={4}>EsLint</Heading>
           <List>
-             <Appear><ListItem>eslint-config-airbnb</ListItem></Appear>
-             <Appear><ListItem>eslint-plugin-compat</ListItem></Appear>
-             <Appear><ListItem>eslint-plugin-jsx-a11y</ListItem></Appear>
+            <Appear><ListItem>eslint-config-airbnb</ListItem></Appear>
+            <Appear><ListItem>eslint-plugin-compat</ListItem></Appear>
+            <Appear><ListItem>eslint-plugin-jsx-a11y</ListItem></Appear>
           </List>
         </Slide>
         <Slide>
           <Heading size={4}>eslint-plugin-compat</Heading>
           <List>
-          <ListItem>Lint browser compatibility of your code</ListItem>
-          <ListItem>Configuration via browerslist</ListItem>
-          <ListItem>Use caniuse and @kangax's compat table for determining coverage</ListItem>
+            <ListItem>Lint browser compatibility of your code</ListItem>
+            <ListItem>Configuration via browerslist</ListItem>
+            <ListItem>
+              Use caniuse and @kangax's compat table for determining coverage
+            </ListItem>
           </List>
-          <Image src={images.compact} width="80%"/>
+          <Image src={images.compact} width="80%" />
         </Slide>
         <Slide>
           <Heading size={4}>eslint-plugin-jsx-a11y</Heading>
           <List>
-          <ListItem>Warns about potential accessibility issues with your React elements</ListItem>
+            <ListItem>
+              Warns about potential accessibility issues with your React elements
+            </ListItem>
           </List>
         </Slide>
-      
+
         <Slide>
           <Image
             alt="StyleLint logo"
@@ -490,65 +505,247 @@ export default class Presentation extends React.Component {
             src={images.stylelint}
           />
           <Heading size={4}>StyleLint</Heading>
-          <List>CSS linter that helps you enforce consistent conventions and avoid errors in your stylesheets</List>
-          <Image src={images.stylelintExample} width="100%"/>
+          <List>
+            CSS linter that helps you enforce consistent conventions and avoid errors in your stylesheets
+          </List>
+          <Image src={images.stylelintExample} width="100%" />
         </Slide>
 
-        <Slide transition={["fade"]}>
-
-          <Image alt="Yarn Logo" width="25%" height="25%" src={images.yarn} />
-
-          <Appear>
-            <Heading size={4} textColor="secondary">Yarn</Heading>
-          </Appear>
-          <Appear><Heading size={6}>Deterministic</Heading></Appear>
-          <Appear>
-            <Text>
-              The same dependencies will be installed the same exact way across every machine regardless of install order.
-            </Text>
-          </Appear>
-
+        <Slide bgColor="tertiary" maxHeight="100vh">
+          <Heading size={2}>Formatting</Heading>
         </Slide>
-        <Slide transition={["fade"]}>
-          <Terminal
-            title="1. elijahm@elijahm: ~(zsh)"
-            output={[
-              <Typist key="t1" cursor={cursor}>yarn upgrade-interactive</Typist>,
-              <div>yarn upgrade-interactive v0.24.4</div>,
-              <div>? Choose which packages to update. </div>,
-              <div>(Press `space `to select, `a` to toggle all,
-`i` to inverse selection)</div>,
-              <div style={{ color: "#33B969" }}>TOTAL: 174 SUCCESS</div>,
-              <div>
-                <div>
-                  =============================== Coverage summary ===============================
-                </div>
-                <div style={{ color: "#DEC612" }}>
-                  Statements   : 51.29% ( 278/542 )
-                </div>
-                <div style={{ color: "#EE5057" }}>
-                  Branches     : 38.78% ( 95/245 )
-                </div>
-                <div style={{ color: "#EE5057" }}>
-                  Functions    : 46.21% ( 61/132 )
-                </div>
-                <div style={{ color: "#DEC612" }}>
-                  Lines        : 52.69% ( 274/520 )
-                </div>
-                <div>
-                  ================================================================================
-                </div>
-              </div>
-            ]}
+
+        <Slide maxHeight="100vh">
+          <Image
+            alt="Editor Config logo"
+            width="15%"
+            height="15%"
+            src={images.editorconfig}
+          />
+          <Heading size={4}>EditorConfig</Heading>
+        </Slide>
+
+        <Slide maxHeight="100vh">
+          <Image
+            alt="Prettier logo"
+            width="15%"
+            height="15%"
+            src={images.prettier}
+          />
+          <Heading size={4}>Prettier</Heading>
+          <Text>Javascript formatter</Text>
+          <Appear>
+            <List>
+              <ListItem>Tabs</ListItem>
+              <ListItem>Print Width</ListItem>
+              <ListItem>Tab Width</ListItem>
+              <ListItem>Quotes</ListItem>
+              <ListItem>Trailing Commas</ListItem>
+              <ListItem>Bracket Spacing</ListItem>
+              <ListItem>JSX Brackets on Same Line</ListItem>
+              <ListItem>Parser</ListItem>
+              <ListItem>Semicolons</ListItem>
+            </List>
+          </Appear>
+        </Slide>
+
+        <Slide maxHeight="100vh">
+          <Image
+            alt="Prettier logo"
+            width="15%"
+            height="15%"
+            src={images.stylefmt}
+          />
+          <Heading size={4}>Stylefmt</Heading>
+          <Text>CSS formatter</Text>
+          <Text margin="10% 0 0 0" textSize="1em">
+            Automatically formats CSS according to stylelint rules.
+          </Text>
+        </Slide>
+
+        <Slide maxHeight="100vh">
+          <Image
+            alt="Lint Staged logo"
+            width="15%"
+            height="15%"
+            src={images.lintstaged}
+          />
+          <Heading size={4}>Lint-Staged</Heading>
+          <Text margin="10% 0 0 0" textSize="1em">
+            Run linters against staged git files and don't let 💩 slip into your code base!
+          </Text>
+          <CodePane
+            lang="javascript"
+            source={require("raw-loader!../assets/lintstaged.example")}
+            margin="20px auto"
           />
         </Slide>
-        <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
-          <BlockQuote>
-            <Quote>Example Quote</Quote>
-            <Cite>Author</Cite>
-          </BlockQuote>
+
+        <Slide bgColor="tertiary" maxHeight="100vh">
+          <Heading size={2}>Dependency Management</Heading>
         </Slide>
-        <Slide />
+
+        <Slide maxHeight="100vh">
+          <Image alt="NVM logo" width="15%" height="15%" src={images.nvm} />
+          <Heading size={4}>NVM</Heading>
+          <Text>Node Version Manager</Text>
+          <Text margin="5% 0 0 0">.nvmrc</Text>
+          <CodePane
+            lang="javascript"
+            source={require("raw-loader!../assets/nvm.example")}
+            margin="20px auto"
+          />
+        </Slide>
+
+        <Slide maxHeight="100vh">
+          <Image alt="Yarn Logo" width="25%" height="25%" src={images.yarn} />
+          <Heading size={4} textColor="secondary">Yarn</Heading>
+          <Heading size={6}>Deterministic</Heading>
+          <Text margin="10% 0 0 0 ">
+            The same dependencies will be installed the same exact way across every machine regardless of install order.
+          </Text>
+        </Slide>
+
+        <Slide maxHeight="100vh">
+          <Link
+            href="https://github.com/Stinkstudios/boilerplate-react/commit/d2ccd0b61f81e237f265929664837719bc5a7549?diff=unified"
+            target="_blank"
+          >
+            frontend/yarn.lock
+          </Link>
+          <Image src={images.yarnLock} />
+        </Slide>
+
+        <Slide maxHeight="100vh">
+          <Heading size={4} textColor="secondary">
+            yarn upgrade-interactive
+          </Heading>
+          <Image src={images.yarnUpgrade} />
+        </Slide>
+
+        <Slide>
+          <Heading size={4} textColor="secondary">
+            yarn check --integrity
+          </Heading>
+          <Text margin="10% 0 0 0 ">
+            Verifies that versions and hashed value of the package contents in the project’s package.json matches that of yarn’s lock file. This helps to verify that the package dependencies have not been altered.
+          </Text>
+        </Slide>
+
+        <Slide bgColor="tertiary" maxHeight="100vh">
+          <Heading size={2}>Others</Heading>
+        </Slide>
+
+        <Slide maxHeight="100vh">
+          <Image
+            alt="CircleCi Logo"
+            width="25%"
+            height="25%"
+            src={images.circleci}
+          />
+          <Heading size={4} textColor="secondary">CircleCi</Heading>
+          <Text margin="5% 0 0 0">
+            The modern continuous integration and delivery platform
+          </Text>
+        </Slide>
+
+        <Slide maxHeight="100vh">
+          <Image
+            alt="Sentry Logo"
+            width="25%"
+            height="25%"
+            src={images.sentry}
+          />
+          <Heading size={4} textColor="secondary">Sentry</Heading>
+          <Text margin="5% 0 0 0">
+            Sentry’s real-time error tracking gives you insight into production deployments and information to reproduce and fix crashes.
+          </Text>
+        </Slide>
+
+        <Slide maxHeight="100vh">
+          <Heading size={4} textColor="secondary">
+            <Link
+              href="https://github.com/40thieves/webpack-sentry-plugin"
+              target="_blank"
+            >
+              webpack-sentry-plugin
+            </Link>
+          </Heading>
+          <Text margin="5% 0 0 0">
+            Webpack plugin to upload source maps to Sentry
+          </Text>
+          <CodePane
+            lang="javascript"
+            source={require("raw-loader!../assets/webpack-sentry.example")}
+            margin="20px auto"
+          />
+        </Slide>
+
+        <Slide maxHeight="100vh">
+          <Image src={images.sentrybefore} />
+        </Slide>
+
+        <Slide maxHeight="100vh">
+          <Image src={images.sentryafter} />
+        </Slide>
+
+        <Slide maxHeight="100vh">
+          <Heading size={2}>RoadMap</Heading>
+          <Layout
+            style={{
+              display: "flex",
+              alignItems: "center",
+              flexDirection: "row"
+            }}
+          >
+            <Appear>
+              <Fill
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  flexDirection: "column"
+                }}
+              >
+                <Image
+                  width="200px"
+                  alt="editorconfig logo"
+                  src={images.browserstack}
+                />
+                <Text>BrowserStack</Text>
+                <Text> Selenium Cloud Testing</Text>
+              </Fill>
+            </Appear>
+            <Appear>
+              <Fill
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  flexDirection: "column"
+                }}
+              >
+                <Image
+                  width="300px"
+                  alt="editorconfig logo"
+                  src={images.typescript}
+                />
+                <Text>?</Text>
+
+              </Fill>
+            </Appear>
+          </Layout>
+        </Slide>
+
+        <Slide>
+          <Heading size={2}>Thanks</Heading>
+          <Appear>
+            <Heading size={2}>
+              <Link href="https://github.com/Stinkstudios/boilerplate-react/issues">
+                GitHub Issues
+              </Link>
+            </Heading>
+          </Appear>
+        </Slide>
+
       </Deck>
     );
   }

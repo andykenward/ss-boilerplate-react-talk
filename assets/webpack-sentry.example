@@ -1,0 +1,12 @@
+process.env.CIRCLECI && process.env.SENTRY_API_KEY
+      ? new SentryPlugin({
+          organisation: process.env.SENTRY_ORGANISATION,
+          project: process.env.SENTRY_PROJECT,
+          apiKey: process.env.SENTRY_API_KEY,
+          deleteAfterCompile: true,
+          release: () =>
+            process.env.CIRCLECI
+              ? process.env.CIRCLE_BUILD_NUM
+              : process.env.npm_package_version
+        })
+      : () => {}
