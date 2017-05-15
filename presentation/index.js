@@ -62,7 +62,8 @@ const images = {
   stylefmt: require("../assets/stylefmt.svg"),
   circleci: require("../assets/circleci.svg"),
   lintstaged: require("../assets/lintstaged.jpg"),
-  sentry: require("../assets/sentry.svg")
+  sentry: require("../assets/sentry.svg"),
+  compact: require("../assets/eslint-plugin-compat-demo.gif")
 };
 
 preloader(images);
@@ -473,6 +474,27 @@ export default class Presentation extends React.Component {
 
           </List>
         </Slide>
+        <Slide>
+          <Heading size={4}>Linting</Heading>
+        </Slide>
+        <Slide>
+          <Image
+            alt="EsLint logo"
+            width="25%"
+            height="25%"
+            src={images.eslint}
+          />
+          <Heading size={4}>EsLint</Heading>
+          <List>
+             <Appear><ListItem>eslint-config-airbnb</ListItem></Appear>
+             <Appear><ListItem>eslint-plugin-compat</ListItem></Appear>
+             <Appear><ListItem>eslint-plugin-jsx-a11y</ListItem></Appear>
+          </List>
+        </Slide>
+        <Slide>
+          <Heading size={4}>eslint-plugin-compact</Heading>
+          <Image src={images.compact} width="80%"/>
+        </Slide>
         <Slide transition={["fade"]}>
 
           <Image alt="Yarn Logo" width="25%" height="25%" src={images.yarn} />
@@ -493,7 +515,10 @@ export default class Presentation extends React.Component {
             title="1. elijahm@elijahm: ~(zsh)"
             output={[
               <Typist key="t1" cursor={cursor}>yarn upgrade-interactive</Typist>,
-              <Typist key="t1" cursor={cursor}>yarn upgrade-interactive v0.24.4</Typist>,
+              <div>yarn upgrade-interactive v0.24.4</div>,
+              <div>? Choose which packages to update. </div>,
+              <div>(Press `space `to select, `a` to toggle all,
+`i` to inverse selection)</div>,
               <div style={{ color: "#33B969" }}>TOTAL: 174 SUCCESS</div>,
               <div>
                 <div>
