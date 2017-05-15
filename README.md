@@ -13,6 +13,8 @@ Then, to start up the local server, run `yarn start`
 
 Open a browser and hit [http://localhost:3000](http://localhost:3000), and we are ready to roll
 
+Presenter [http://localhost:3000/#/0?presenter&timer](http://localhost:3000/#/0?presenter&timer)
+
 ## Build & Deployment
 
 Building the dist version of the project is as easy as running `yarn run build`
