@@ -24,12 +24,21 @@ import {
   Fill
 } from "spectacle";
 
+import Terminal from "spectacle-terminal";
+import Typist from "react-typist";
+
 // Import image preloader util
 import preloader from "spectacle/lib/utils/preloader";
 
 // Import theme
 import createTheme from "spectacle/lib/themes/default";
-
+const cursor = {
+  show: false,
+  blink: true,
+  element: "|",
+  hideWhenDone: false,
+  hideWhenDoneDelay: 1000
+};
 // Require CSS
 require("normalize.css");
 require("spectacle/lib/themes/default/index.css");
@@ -465,14 +474,9 @@ export default class Presentation extends React.Component {
           </List>
         </Slide>
         <Slide transition={["fade"]}>
-          
-          <Image
-            alt="Yarn Logo"
-            width="25%"
-            height="25%"
-            src={images.yarn}
-          />
-          
+
+          <Image alt="Yarn Logo" width="25%" height="25%" src={images.yarn} />
+
           <Appear>
             <Heading size={4} textColor="secondary">Yarn</Heading>
           </Appear>
@@ -482,7 +486,37 @@ export default class Presentation extends React.Component {
               The same dependencies will be installed the same exact way across every machine regardless of install order.
             </Text>
           </Appear>
-          
+
+        </Slide>
+        <Slide transition={["fade"]}>
+          <Terminal
+            title="1. elijahm@elijahm: ~(zsh)"
+            output={[
+              <Typist key="t1" cursor={cursor}>yarn upgrade-interactive</Typist>,
+              <Typist key="t1" cursor={cursor}>yarn upgrade-interactive v0.24.4</Typist>,
+              <div style={{ color: "#33B969" }}>TOTAL: 174 SUCCESS</div>,
+              <div>
+                <div>
+                  =============================== Coverage summary ===============================
+                </div>
+                <div style={{ color: "#DEC612" }}>
+                  Statements   : 51.29% ( 278/542 )
+                </div>
+                <div style={{ color: "#EE5057" }}>
+                  Branches     : 38.78% ( 95/245 )
+                </div>
+                <div style={{ color: "#EE5057" }}>
+                  Functions    : 46.21% ( 61/132 )
+                </div>
+                <div style={{ color: "#DEC612" }}>
+                  Lines        : 52.69% ( 274/520 )
+                </div>
+                <div>
+                  ================================================================================
+                </div>
+              </div>
+            ]}
+          />
         </Slide>
         <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
           <BlockQuote>
