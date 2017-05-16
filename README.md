@@ -1,6 +1,8 @@
 # ss-boilerplate-react-talk
 Stink Studios Boilerplate React Talk 2017
 
+[http://ss-boilerplate-react-talk.surge.sh/](http://ss-boilerplate-react-talk.surge.sh/)
+
 ## Reference
 
 The Spectacle core API is available at [https://github.com/FormidableLabs/spectacle/blob/master/README.markdown](https://github.com/FormidableLabs/spectacle/blob/master/README.markdown).
@@ -20,5 +22,3 @@ Presenter [http://localhost:3000/#/0?presenter&timer](http://localhost:3000/#/0?
 Building the dist version of the project is as easy as running `yarn run build`
 
 If you want to deploy the slideshow to surge, run `yarn run deploy`
-
-[http://ss-boilerplate-react-talk.surge.sh/](http://ss-boilerplate-react-talk.surge.sh/)
