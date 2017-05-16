@@ -93,7 +93,7 @@ export default class Presentation extends React.Component {
             size={1}
             fit
             bold
-            href=" https://github.com/Stinkstudios/boilerplate-react/"
+            href="https://github.com/Stinkstudios/boilerplate-react/"
             target="_blank"
           >
             https://github.com/Stinkstudios/boilerplate-react/
@@ -122,12 +122,22 @@ export default class Presentation extends React.Component {
               size={4}
               textColor="secondary"
             >
-              <Image
-                width="180px"
-                alt="babel"
-                src="https://raw.githubusercontent.com/babel/logo/master/babel.png"
-              />
-              <Text>Babel</Text>
+              <Link
+                href="https://babeljs.io/"
+                target="_blank"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  flexDirection: "column"
+                }}
+              >
+                <Image
+                  width="180px"
+                  alt="babel"
+                  src="https://raw.githubusercontent.com/babel/logo/master/babel.png"
+                />
+                <Text>Babel</Text>
+              </Link>
             </ListItem>
             <ListItem
               style={{
@@ -140,12 +150,22 @@ export default class Presentation extends React.Component {
               size={4}
               textColor="secondary"
             >
-              <Image
-                width="100px"
-                height="100px"
-                src="https://webpack.js.org/assets/icon-square-big.svg"
-              />
-              <Text>Webpack 2</Text>
+              <Link
+                href="https://webpack.js.org/"
+                target="_blank"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  flexDirection: "column"
+                }}
+              >
+                <Image
+                  width="100px"
+                  height="100px"
+                  src="https://webpack.js.org/assets/icon-square-big.svg"
+                />
+                <Text>Webpack 2</Text>
+              </Link>
             </ListItem>
             <ListItem
               style={{
@@ -158,12 +178,22 @@ export default class Presentation extends React.Component {
               size={4}
               textColor="secondary"
             >
-              <Image
-                width="100px"
-                height="100px"
-                src="http://postcss.github.io/postcss/logo.svg"
-              />
-              <Text>PostCSS</Text>
+              <Link
+                href="http://postcss.org/"
+                target="_blank"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  flexDirection: "column"
+                }}
+              >
+                <Image
+                  width="100px"
+                  height="100px"
+                  src="http://postcss.github.io/postcss/logo.svg"
+                />
+                <Text>PostCSS</Text>
+              </Link>
             </ListItem>
             <ListItem
               style={{
@@ -176,8 +206,18 @@ export default class Presentation extends React.Component {
               size={4}
               textColor="secondary"
             >
-              <Image alt="React" width="100px" src={images.react} />
-              <Text>React</Text>
+              <Link
+                href="https://facebook.github.io/react/"
+                target="_blank"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  flexDirection: "column"
+                }}
+              >
+                <Image alt="React" width="100px" src={images.react} />
+                <Text>React</Text>
+              </Link>
             </ListItem>
             <ListItem
               style={{
@@ -190,8 +230,18 @@ export default class Presentation extends React.Component {
               size={4}
               textColor="secondary"
             >
-              <Image width="100px" height="100px" src={images.redux} />
-              <Text>Redux</Text>
+              <Link
+                href="http://redux.js.org/"
+                target="_blank"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  flexDirection: "column"
+                }}
+              >
+                <Image width="100px" height="100px" src={images.redux} />
+                <Text>Redux</Text>
+              </Link>
             </ListItem>
             <ListItem
               style={{
@@ -204,8 +254,18 @@ export default class Presentation extends React.Component {
               size={4}
               textColor="secondary"
             >
-              <Image width="100px" src={images.reduxSaga} />
-              <Text>Redux-Saga</Text>
+              <Link
+                href="https://redux-saga.js.org/"
+                target="_blank"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  flexDirection: "column"
+                }}
+              >
+                <Image width="100px" src={images.reduxSaga} />
+                <Text>Redux-Saga</Text>
+              </Link>
             </ListItem>
             <ListItem
               style={{
@@ -218,9 +278,20 @@ export default class Presentation extends React.Component {
               size={4}
               textColor="secondary"
             >
-              <Image width="100px" height="100px" src={images.reselect} />
-              <Text>Reselect</Text>
+              <Link
+                href="https://github.com/reactjs/reselect"
+                target="_blank"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  flexDirection: "column"
+                }}
+              >
+                <Image width="100px" height="100px" src={images.reselect} />
+                <Text>Reselect</Text>
+              </Link>
             </ListItem>
+
             <ListItem
               style={{
                 display: "flex",
@@ -232,8 +303,18 @@ export default class Presentation extends React.Component {
               size={4}
               textColor="secondary"
             >
-              <Image width="220px" height="100px" src={images.immutable} />
-              <Text>Immutable JS</Text>
+              <Link
+                href="https://facebook.github.io/immutable-js/"
+                target="_blank"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  flexDirection: "column"
+                }}
+              >
+                <Image width="220px" height="100px" src={images.immutable} />
+                <Text>Immutable JS</Text>
+              </Link>
             </ListItem>
           </List>
         </Slide>
@@ -259,13 +340,23 @@ export default class Presentation extends React.Component {
               size={4}
               textColor="secondary"
             >
-              <Image
-                width="100px"
-                height="100px"
-                alt="editorconfig logo"
-                src={images.editorconfig}
-              />
-              <Text>EditorConfig</Text>
+              <Link
+                href="http://editorconfig.org/"
+                target="_blank"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  flexDirection: "column"
+                }}
+              >
+                <Image
+                  width="100px"
+                  height="100px"
+                  alt="editorconfig logo"
+                  src={images.editorconfig}
+                />
+                <Text>EditorConfig</Text>
+              </Link>
             </ListItem>
             <ListItem
               style={{
@@ -278,13 +369,23 @@ export default class Presentation extends React.Component {
               size={4}
               textColor="secondary"
             >
-              <Image
-                alt="NVM logo"
-                width="100px"
-                height="100px"
-                src={images.nvm}
-              />
-              <Text>NVM</Text>
+              <Link
+                href="https://github.com/creationix/nvm"
+                target="_blank"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  flexDirection: "column"
+                }}
+              >
+                <Image
+                  alt="NVM logo"
+                  width="100px"
+                  height="100px"
+                  src={images.nvm}
+                />
+                <Text>NVM</Text>
+              </Link>
             </ListItem>
             <ListItem
               style={{
@@ -297,13 +398,23 @@ export default class Presentation extends React.Component {
               size={4}
               textColor="secondary"
             >
-              <Image
-                alt="Yarn Logo"
-                width="100px"
-                height="100px"
-                src={images.yarn}
-              />
-              <Text>Yarn</Text>
+              <Link
+                href="https://yarnpkg.com/en/"
+                target="_blank"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  flexDirection: "column"
+                }}
+              >
+                <Image
+                  alt="Yarn Logo"
+                  width="100px"
+                  height="100px"
+                  src={images.yarn}
+                />
+                <Text>Yarn</Text>
+              </Link>
             </ListItem>
             <ListItem
               style={{
@@ -316,13 +427,23 @@ export default class Presentation extends React.Component {
               size={4}
               textColor="secondary"
             >
-              <Image
-                alt="EsLint logo"
-                width="100px"
-                height="100px"
-                src={images.eslint}
-              />
-              <Text>ESLint</Text>
+              <Link
+                href="http://eslint.org/"
+                target="_blank"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  flexDirection: "column"
+                }}
+              >
+                <Image
+                  alt="EsLint logo"
+                  width="100px"
+                  height="100px"
+                  src={images.eslint}
+                />
+                <Text>ESLint</Text>
+              </Link>
             </ListItem>
             <ListItem
               style={{
@@ -335,13 +456,23 @@ export default class Presentation extends React.Component {
               size={4}
               textColor="secondary"
             >
-              <Image
-                alt="Prettier Logo"
-                width="100px"
-                height="100px"
-                src={images.prettier}
-              />
-              <Text>Prettier</Text>
+              <Link
+                href="https://github.com/prettier/prettier"
+                target="_blank"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  flexDirection: "column"
+                }}
+              >
+                <Image
+                  alt="Prettier Logo"
+                  width="100px"
+                  height="100px"
+                  src={images.prettier}
+                />
+                <Text>Prettier</Text>
+              </Link>
             </ListItem>
             <ListItem
               style={{
@@ -354,13 +485,23 @@ export default class Presentation extends React.Component {
               size={4}
               textColor="secondary"
             >
-              <Image
-                alt="stylelint logo"
-                width="100px"
-                height="100px"
-                src={images.stylelint}
-              />
-              <Text>StyleLint</Text>
+              <Link
+                href="https://stylelint.io/"
+                target="_blank"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  flexDirection: "column"
+                }}
+              >
+                <Image
+                  alt="stylelint logo"
+                  width="100px"
+                  height="100px"
+                  src={images.stylelint}
+                />
+                <Text>StyleLint</Text>
+              </Link>
             </ListItem>
             <ListItem
               style={{
@@ -373,13 +514,23 @@ export default class Presentation extends React.Component {
               size={4}
               textColor="secondary"
             >
-              <Image
-                alt="stylefmt logo"
-                width="100px"
-                height="100px"
-                src={images.stylefmt}
-              />
-              <Text>Stylefmt</Text>
+              <Link
+                href="https://github.com/morishitter/stylefmt"
+                target="_blank"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  flexDirection: "column"
+                }}
+              >
+                <Image
+                  alt="stylefmt logo"
+                  width="100px"
+                  height="100px"
+                  src={images.stylefmt}
+                />
+                <Text>Stylefmt</Text>
+              </Link>
             </ListItem>
             <ListItem
               style={{
@@ -392,13 +543,23 @@ export default class Presentation extends React.Component {
               size={4}
               textColor="secondary"
             >
-              <Image
-                alt="stylefmt logo"
-                width="100px"
-                height="100px"
-                src={images.lintstaged}
-              />
-              <Text>Lint-staged</Text>
+              <Link
+                href="https://github.com/okonet/lint-staged"
+                target="_blank"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  flexDirection: "column"
+                }}
+              >
+                <Image
+                  alt="stylefmt logo"
+                  width="100px"
+                  height="100px"
+                  src={images.lintstaged}
+                />
+                <Text>Lint-staged</Text>
+              </Link>
             </ListItem>
             <ListItem
               style={{
@@ -411,13 +572,22 @@ export default class Presentation extends React.Component {
               size={4}
               textColor="secondary"
             >
-              <Image
-                alt="stylefmt logo"
-                width="100px"
-                height="100px"
-                src={images.circleci}
-              />
-              <Text>CircleCi</Text>
+              <Link
+                href="https://circleci.com/"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  flexDirection: "column"
+                }}
+              >
+                <Image
+                  alt="stylefmt logo"
+                  width="100px"
+                  height="100px"
+                  src={images.circleci}
+                />
+                <Text>CircleCi</Text>
+              </Link>
             </ListItem>
             <ListItem
               style={{
@@ -430,13 +600,22 @@ export default class Presentation extends React.Component {
               size={4}
               textColor="secondary"
             >
-              <Image
-                alt="stylefmt logo"
-                width="100px"
-                height="100px"
-                src={images.sentry}
-              />
-              <Text>Sentry</Text>
+              <Link
+                href="https://sentry.io/stinkstudios/"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  flexDirection: "column"
+                }}
+              >
+                <Image
+                  alt="sentry logo"
+                  width="100px"
+                  height="100px"
+                  src={images.sentry}
+                />
+                <Text>Sentry</Text>
+              </Link>
             </ListItem>
 
           </List>
@@ -453,13 +632,45 @@ export default class Presentation extends React.Component {
           />
           <Heading size={4}>EsLint</Heading>
           <List>
-            <Appear><ListItem>eslint-config-airbnb</ListItem></Appear>
-            <Appear><ListItem>eslint-plugin-compat</ListItem></Appear>
-            <Appear><ListItem>eslint-plugin-jsx-a11y</ListItem></Appear>
+            <Appear>
+              <ListItem>
+                <Link
+                  target="_blank"
+                  href="https://www.npmjs.com/package/eslint-config-airbnb"
+                >
+                  eslint-config-airbnb
+                </Link>
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                <Link
+                  target="_blank"
+                  href="https://github.com/amilajack/eslint-plugin-compat"
+                >
+                  eslint-plugin-compat
+                </Link>
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                <Link
+                  target="_blank"
+                  href="https://github.com/evcohen/eslint-plugin-jsx-a11y"
+                >
+                  eslint-plugin-jsx-a11y
+                </Link>
+              </ListItem>
+            </Appear>
           </List>
         </Slide>
         <Slide height="100vh">
-          <Heading size={4}>eslint-plugin-compat</Heading>
+          <Link
+            target="_blank"
+            href="https://github.com/amilajack/eslint-plugin-compat"
+          >
+            <Heading size={4}>eslint-plugin-compat</Heading>
+          </Link>
           <List>
             <ListItem>Lint browser compatibility of your code</ListItem>
             <ListItem>Configuration via browerslist</ListItem>
