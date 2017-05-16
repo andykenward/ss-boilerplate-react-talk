@@ -3,45 +3,26 @@ import React from "react";
 
 // Import Spectacle Core tags
 import {
-  BlockQuote,
-  Cite,
-  Code,
   Deck,
   Heading,
   ListItem,
   List,
-  Quote,
   Slide,
   Text,
   Link,
   Image,
-  Table,
-  TableHeader,
-  TableHeaderItem,
-  TableRow,
-  TableItem,
-  TableBody,
   Appear,
   CodePane,
   Layout,
   Fill
 } from "spectacle";
 
-import Terminal from "spectacle-terminal";
-import Typist from "react-typist";
-
 // Import image preloader util
 import preloader from "spectacle/lib/utils/preloader";
 
 // Import theme
 import createTheme from "spectacle/lib/themes/default";
-const cursor = {
-  show: false,
-  blink: true,
-  element: "|",
-  hideWhenDone: false,
-  hideWhenDoneDelay: 1000
-};
+
 // Require CSS
 require("normalize.css");
 require("spectacle/lib/themes/default/index.css");
@@ -477,7 +458,7 @@ export default class Presentation extends React.Component {
             <Appear><ListItem>eslint-plugin-jsx-a11y</ListItem></Appear>
           </List>
         </Slide>
-        <Slide>
+        <Slide height="100vh">
           <Heading size={4}>eslint-plugin-compat</Heading>
           <List>
             <ListItem>Lint browser compatibility of your code</ListItem>
@@ -486,7 +467,7 @@ export default class Presentation extends React.Component {
               Use caniuse and @kangax's compat table for determining coverage
             </ListItem>
           </List>
-          <Image src={images.compact} width="80%" />
+          <Image src={images.compact} width="50%" />
         </Slide>
         <Slide>
           <Heading size={4}>eslint-plugin-jsx-a11y</Heading>
@@ -613,14 +594,14 @@ export default class Presentation extends React.Component {
           >
             frontend/yarn.lock
           </Link>
-          <Image src={images.yarnLock} />
+          <Image width="80%" src={images.yarnLock} />
         </Slide>
 
         <Slide maxHeight="100vh">
           <Heading size={4} textColor="secondary">
             yarn upgrade-interactive
           </Heading>
-          <Image src={images.yarnUpgrade} />
+          <Image width="80%" src={images.yarnUpgrade} />
         </Slide>
 
         <Slide>
@@ -682,11 +663,13 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide maxHeight="100vh">
-          <Image src={images.sentrybefore} />
+          <Heading size={4} textColor="secondary">No Sourcemaps</Heading>
+          <Image width="100%" src={images.sentrybefore} />
         </Slide>
 
         <Slide maxHeight="100vh">
-          <Image src={images.sentryafter} />
+          <Heading size={4} textColor="secondary">Sourcemaps</Heading>
+          <Image width="100%" src={images.sentryafter} />
         </Slide>
 
         <Slide maxHeight="100vh">
