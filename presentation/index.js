@@ -205,7 +205,7 @@ export default class Presentation extends React.Component {
                   height="100px"
                   src="https://webpack.js.org/assets/icon-square-big.svg"
                 />
-                <Text>Webpack 2</Text>
+                <Text>Webpack 3</Text>
               </Link>
             </ListItem>
             <ListItem
