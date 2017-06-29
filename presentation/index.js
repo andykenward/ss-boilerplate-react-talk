@@ -118,27 +118,24 @@ export default class Presentation extends React.Component {
             frontend-user-guide.md
           </Link>
         </Slide>
-         <Slide maxHeight="100vh">
-          
-            <List>
-              <ListItem>Requirements</ListItem>
-              <ListItem>Available Scripts</ListItem>
-              <ListItem>Managing dependencies</ListItem>
-              <ListItem>Code Linting</ListItem>
-              <ListItem>Code Formatting</ListItem>
-              <ListItem>Browser support</ListItem>
-              <ListItem>Code Splitting</ListItem>
-              <ListItem>Routing</ListItem>
-              <ListItem>Google Analytics</ListItem>
-              <ListItem>JS Error reporting</ListItem>
-              <ListItem>Adding Images, Fonts and Files</ListItem>
-              <ListItem>Using the public Folder</ListItem>
-              <ListItem>Environment Variables</ListItem>
-              <ListItem>Local Production Server</ListItem>
-            </List>
-          
+        <Slide maxHeight="100vh">
+          <List>
+            <ListItem>Requirements</ListItem>
+            <ListItem>Available Scripts</ListItem>
+            <ListItem>Managing dependencies</ListItem>
+            <ListItem>Code Linting</ListItem>
+            <ListItem>Code Formatting</ListItem>
+            <ListItem>Browser support</ListItem>
+            <ListItem>Code Splitting</ListItem>
+            <ListItem>Routing</ListItem>
+            <ListItem>Google Analytics</ListItem>
+            <ListItem>JS Error reporting</ListItem>
+            <ListItem>Adding Images, Fonts and Files</ListItem>
+            <ListItem>Using the public Folder</ListItem>
+            <ListItem>Environment Variables</ListItem>
+            <ListItem>Local Production Server</ListItem>
+          </List>
         </Slide>
-
 
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={4} textColor="secondary">
@@ -309,7 +306,7 @@ export default class Presentation extends React.Component {
                 <Text>Redux-Saga</Text>
               </Link>
             </ListItem>
-                        <ListItem
+            <ListItem
               style={{
                 display: "flex",
                 alignItems: "center",
