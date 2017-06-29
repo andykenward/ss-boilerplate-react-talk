@@ -55,7 +55,8 @@ const images = {
   sentryafter: require("../assets/sentryafter.png"),
   browserstack: require("../assets/browserstack.svg"),
   typescript: require("../assets/typescript.svg"),
-  stylelintNo: require("../assets/stylelint-no-unsupported.png")
+  stylelintNo: require("../assets/stylelint-no-unsupported.png"),
+  router: require("../assets/router.png")
 };
 
 preloader(images);
@@ -306,6 +307,30 @@ export default class Presentation extends React.Component {
               >
                 <Image width="100px" src={images.reduxSaga} />
                 <Text>Redux-Saga</Text>
+              </Link>
+            </ListItem>
+                        <ListItem
+              style={{
+                display: "flex",
+                alignItems: "center",
+                flexDirection: "column",
+                minWidth: "25%",
+                marginBottom: "5%"
+              }}
+              size={4}
+              textColor="secondary"
+            >
+              <Link
+                href="https://github.com/ReactTraining/react-router/tree/v4.1.1"
+                target="_blank"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  flexDirection: "column"
+                }}
+              >
+                <Image width="100px" src={images.router} />
+                <Text>React Router 4</Text>
               </Link>
             </ListItem>
             <ListItem
