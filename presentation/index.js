@@ -93,12 +93,12 @@ export default class Presentation extends React.Component {
             size={1}
             fit
             bold
-            href="https://github.com/Stinkstudios/boilerplate-react/"
+            href="https://github.com/Stinkstudios/boilerplate-react/releases/tag/v3.0.0"
             target="_blank"
           >
             https://github.com/Stinkstudios/boilerplate-react/
           </Link>
-          <Text>v2.3.0</Text>
+          <Text>v3.0.0</Text>
         </Slide>
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={4} textColor="secondary">Core</Heading>
