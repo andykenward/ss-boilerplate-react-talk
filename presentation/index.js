@@ -98,8 +98,24 @@ export default class Presentation extends React.Component {
             target="_blank"
           >
             https://github.com/Stinkstudios/boilerplate-react/
+            <Text>v3.0.0</Text>
           </Link>
-          <Text>v3.0.0</Text>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary">
+          <Heading margin="0 0 50px 0" size={2} caps>
+            User Guide
+          </Heading>
+
+          <Link
+            textColor="tertiary"
+            size={1}
+            fit
+            bold
+            href="https://github.com/Stinkstudios/boilerplate-react/blob/v3.0.0/docs/frontend-user-guide.md"
+            target="_blank"
+          >
+            frontend-user-guide.md
+          </Link>
         </Slide>
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={4} textColor="secondary">
@@ -718,9 +734,7 @@ export default class Presentation extends React.Component {
               stylelint-no-unsupported-browser-features
             </Heading>
           </Link>
-          <List>
-            Checks against browerslist config supported CSS
-          </List>
+          <List>Checks against browerslist config supported CSS</List>
           <Image src={images.stylelintNo} width="100%" />
         </Slide>
 
