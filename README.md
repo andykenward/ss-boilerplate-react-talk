@@ -1,3 +1,7 @@
+**NOW USING A FORK OF FACEBOOK'S [CREATE REACT APP](https://github.com/facebook/create-react-app)**
+
+**[@stinkstudios/react-scripts](https://www.npmjs.com/package/@stinkstudios/react-scripts)**
+
 # ss-boilerplate-react-talk
 Stink Studios Boilerplate React Talk 2017
 
